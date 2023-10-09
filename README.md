@@ -1,6 +1,6 @@
 # ToDo list
 
-Challenge proposed by the Ignite module of Rocketseat's React course.
+Challenge proposed by Rocketseat's Ignite course related to Fundamentals of React .
 
 ## Features
 
