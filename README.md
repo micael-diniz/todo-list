@@ -31,4 +31,4 @@ Challenge proposed by the Ignite module of Rocketseat's React course.
 
 Figma: [ToDo List](https://www.figma.com/file/MUORNvgGWxae52zzWBRYBK/ToDo-List-%E2%80%A2-Desafio-React-(Copy)?type=design&node-id=56-96&mode=design&t=5OMdVECshh2VJopn-0)
 
-Brainstorming: [Excalidraw](https://excalidraw.com/#json=wfKjcDSa9xSEETlnEAYi1,sIuez0q8A8mRzam6uwWNlQ)
+Brainstorming: [Excalidraw](https://excalidraw.com/#json=fEkF8PIsN9OujGjMsa536,1jn8rv3tLu9mT3SCzlun2w)
