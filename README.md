@@ -1,6 +1,9 @@
 # ToDo list
 
-Challenge proposed by Rocketseat's Ignite course related to Fundamentals of React .
+Challenge proposed by Rocketseat's Ignite course related to Fundamentals of React.
+
+**Briefing:** [Notion](https://efficient-sloth-d85.notion.site/Desafio-01-Praticando-os-conceitos-do-ReactJS-91fd63dd1a5b4a2796152de293ec1074
+)
 
 ## Features
 
