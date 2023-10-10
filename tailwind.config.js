@@ -6,14 +6,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        ...colors
+        ...colors,
+        gray: {
+          600: "#1A1A1A",
+          700: "#0D0D0D"
+        },
+        white: "#ffffff",
       }
     },
     colors: {
-      white: "#ffffff",
-      gray: {
-        600: "#1A1A1A",
-      },
     },
   },
   plugins: [],
