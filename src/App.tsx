@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import { ToDoListHeader } from "./components/molecules/ToDoListHeader";
 import { ToDoListForm } from "./components/molecules/ToDoListForm";
 import { Text } from "./components/atoms/Text";
+import { ToDoListSummary } from "./components/molecules/ToDoListSummary";
 
 export function App() {
   return (
@@ -10,14 +11,19 @@ export function App() {
         <ToDoListHeader.Logo />
       </ToDoListHeader.Root>
 
-      <main className="max-w-[47rem] mx-auto -mt-[1.6875rem]">
+      <main className="mx-auto -mt-[1.6875rem] max-w-[47rem] px-4">
         <ToDoListForm.Root>
           <ToDoListForm.TextInput />
           <ToDoListForm.Submit>
-            <Text>Create</Text>
+            <Text className="text-[0.85rem] leading-[140%]">Create</Text>
             <ToDoListForm.SubmitIcon />
           </ToDoListForm.Submit>
         </ToDoListForm.Root>
+
+        <ToDoListSummary.Root>
+          <ToDoListSummary.CreatedTasksSummary />
+          <ToDoListSummary.CompletedSummary />
+        </ToDoListSummary.Root>
       </main>
     </Fragment>
   );
