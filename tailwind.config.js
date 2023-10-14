@@ -7,15 +7,20 @@ export default {
     extend: {
       colors: {
         ...colors,
+        purpleDark: "#5E60CE",
+        blueDark: "#1E6F9F",
+        blue: "#4EA8DE ",
         gray: {
+          100: "#F2F2F2",
+          300: "#808080",
+          500: "#262626",
           600: "#1A1A1A",
-          700: "#0D0D0D"
+          700: "#0D0D0D",
         },
         white: "#ffffff",
-      }
+      },
     },
-    colors: {
-    },
+    colors: {},
   },
   plugins: [],
 };
