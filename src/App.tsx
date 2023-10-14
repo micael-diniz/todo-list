@@ -1,10 +1,14 @@
 import { Fragment } from "react";
-import { Header } from "./components/atoms/Header";
+import Header from "./components/molecules/CustomHeader";
+
+const TodoListApp = {
+  Header
+}
 
 export function App() {
   return (
     <Fragment>
-      <Header className="h-[12.5rem]"><p className="text-warmGray-50">Header</p></Header>
+      <TodoListApp.Header />
     </Fragment>
   );
 }
