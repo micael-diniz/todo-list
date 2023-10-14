@@ -5,5 +5,5 @@ interface ToDoListSummaryRootProps {
 }
 
 export function ToDoListSummaryRoot({ children }: ToDoListSummaryRootProps) {
-  return <section className="flex justify-between">{children}</section>;
+  return <section className="flex justify-between mb-6">{children}</section>;
 }

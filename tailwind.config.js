@@ -5,6 +5,9 @@ export default {
   content: ["./src/**/*.{jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        "inter": ["Inter", "ui-sans-serif"]
+      },
       colors: {
         ...colors,
         purple: "#8284FA",

@@ -3,6 +3,7 @@ import { ToDoListHeader } from "./components/molecules/ToDoListHeader";
 import { ToDoListForm } from "./components/molecules/ToDoListForm";
 import { Text } from "./components/atoms/Text";
 import { ToDoListSummary } from "./components/molecules/ToDoListSummary";
+import { ToDoListEmptyList } from "./components/molecules/ToDoListEmptyList";
 
 export function App() {
   return (
@@ -24,6 +25,12 @@ export function App() {
           <ToDoListSummary.CreatedTasksSummary />
           <ToDoListSummary.CompletedSummary />
         </ToDoListSummary.Root>
+
+        <ToDoListEmptyList.Root>
+          <ToDoListEmptyList.Icon />
+          <ToDoListEmptyList.Message />
+        </ToDoListEmptyList.Root>
+
       </main>
     </Fragment>
   );

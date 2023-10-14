@@ -1,8 +1,17 @@
 import { ImgHTMLAttributes } from "react";
 import { twMerge } from "tailwind-merge";
+import { Image } from "./Image";
+import logoIcon from "../../assets/logo.svg";
 
-export interface LogoProps extends ImgHTMLAttributes<HTMLImageElement> {}
+interface LogoProps extends ImgHTMLAttributes<HTMLImageElement> {}
 
 export function Logo({ className, ...props }: LogoProps) {
-  return <img className={twMerge(className)} {...props} />;
+  return (
+    <Image
+      className={twMerge(className)}
+      src={logoIcon}
+      alt="ToDo List Logo"
+      {...props}
+    />
+  );
 }
