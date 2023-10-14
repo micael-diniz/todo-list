@@ -1,0 +1,8 @@
+.deleteButton svg {
+  color: var(--color-gray-300);
+  transition: color 0.5s;
+}
+
+.deleteButton:hover svg {
+  color: var(--color-danger);
+}

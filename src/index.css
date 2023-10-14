@@ -3,9 +3,19 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --color-danger: #E25858;
+    --color-gray-300: #808080;
+  }
+  
+  html {
+    @apply h-screen;
+  }
+
   body {
     @apply bg-gray-600;
     @apply font-inter;
+    @apply h-full;
   }
   
   input, button {

@@ -1,0 +1,5 @@
+.checkbox[data-selected=true] p{
+  text-decoration: line-through;
+  color: var(--color-gray-300);
+  transition: color 0.5s, line-through 0.5s;
+}

@@ -1,10 +1,15 @@
-const colors = require("tailwindcss/colors");
+import { nextui } from "@nextui-org/react";
+
+import  colors from "tailwindcss/colors";
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{jsx,tsx}"],
+  content: ["./src/**/*.{jsx,tsx}", "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      minHeight: {
+        18: "4.5rem",
+      },
       fontFamily: {
         "inter": ["Inter", "ui-sans-serif"]
       },
@@ -24,9 +29,24 @@ export default {
           700: "#0D0D0D",
         },
         white: "#ffffff",
+        default: {
+          100: "#1E6F9F33"
+        },
+        danger: "#E25858",
       },
     },
     colors: {},
   },
-  plugins: [],
+  plugins: [nextui({
+    addCommonColors: true,
+    themes: {
+      checkbox: {
+        colors: {
+          primary: {
+            DEFAULT: "#5E60CE"
+          }
+        }
+      }
+    }
+  })]
 };
