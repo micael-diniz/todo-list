@@ -1,13 +1,13 @@
 import { ErrorMessage } from "@hookform/error-message";
 import { TextInput, TextInputProps } from "../../atoms/TextInput";
 import { FieldErrors, UseFormRegister } from "react-hook-form";
-import { NewTodoSchema } from "./ToDoListFormRoot";
+import { NewTodoFormSchema } from "./ToDoListFormRoot";
 import { Text } from "../../atoms/Text";
 
 interface ToDoListFormTextInputProps extends TextInputProps {
   errors: FieldErrors,
-  name: keyof NewTodoSchema
-  register: UseFormRegister<NewTodoSchema>
+  name: keyof NewTodoFormSchema
+  register: UseFormRegister<NewTodoFormSchema>
 }
 
 export function ToDoListFormTextInput({ errors, name, register, ...props }: ToDoListFormTextInputProps) {
