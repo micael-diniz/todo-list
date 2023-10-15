@@ -1,6 +1,6 @@
 import { v4 as uuid } from 'uuid';
 
-interface TodoProps {
+export interface TodoProps {
   toDoContent: string;
   isChecked: boolean;
   id?: string;

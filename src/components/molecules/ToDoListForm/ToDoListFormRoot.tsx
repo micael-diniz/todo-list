@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Todo } from "../../../classes/Todo";
 import { useBoundStore } from "../../../store";
+import { useShallow } from "zustand/react/shallow";
 
 const newTodoFormSchema = z.object({
   toDoContent: z.string().min(1, {"message": "Don't forget to add your To-do content!"})
@@ -18,11 +19,10 @@ export function ToDoListFormRoot() {
     handleSubmit,
     formState: { errors },
   } = useForm<NewTodoFormSchema>({resolver: zodResolver(newTodoFormSchema)})
-  const addNewTodo = useBoundStore((state) => state.addNewTodo)
+  const addNewTodo = useBoundStore(useShallow((state) => state.addNewTodo))
 
   function handleFormSubmit(data: NewTodoFormSchema ) {
     const todo = new Todo({ toDoContent: data.toDoContent, isChecked: false });
-    console.log({todo})
     addNewTodo(todo)
   }
 

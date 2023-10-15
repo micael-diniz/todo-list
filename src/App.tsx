@@ -5,9 +5,12 @@ import { ToDoListSummary } from "./components/molecules/ToDoListSummary";
 import { ToDoListItemsList } from "./components/organisms/ToDoListItemsList";
 import { ToDoListTodo } from "./components/molecules/ToDoListTodo";
 import { useBoundStore } from "./store";
+import { ToDoListEmptyList } from "./components/molecules/ToDoListEmptyList";
+import { useShallow } from "zustand/react/shallow";
 
 export function App() {
-  const toDosList = useBoundStore((state) => state.toDosList)
+  const toDosList = useBoundStore(useShallow((state) => state.toDosList))
+  const isToDoListEmpty = !toDosList.length
   console.log({toDosList})
   return (
     <Fragment>
@@ -23,24 +26,32 @@ export function App() {
           <ToDoListSummary.CompletedSummary />
         </ToDoListSummary.Root>
 
-        {/* <ToDoListEmptyList.Root>
-          <ToDoListEmptyList.Icon />
-          <ToDoListEmptyList.Message />
-        </ToDoListEmptyList.Root> */}
-        <ToDoListItemsList.Root>
-          <ToDoListTodo.Root>
-            <ToDoListTodo.Text>
-              First task
-            </ToDoListTodo.Text>
-            <ToDoListTodo.Delete />
-          </ToDoListTodo.Root>
-          <ToDoListTodo.Root>
-            <ToDoListTodo.Text>
-              First task
-            </ToDoListTodo.Text>
-            <ToDoListTodo.Delete />
-          </ToDoListTodo.Root>    
-        </ToDoListItemsList.Root>
+        { isToDoListEmpty ? 
+          (
+            <ToDoListEmptyList.Root>
+              <ToDoListEmptyList.Icon />
+              <ToDoListEmptyList.Message />
+            </ToDoListEmptyList.Root>
+          ) : 
+          (
+            <ToDoListItemsList.Root>
+              {toDosList.map(todo => 
+                (
+                  <ToDoListTodo.Root 
+                    key={todo.id} 
+                    isChecked={todo.isChecked} 
+                    todoId={todo.id}
+                  >
+                    <ToDoListTodo.Text>
+                      {todo.toDoContent}
+                    </ToDoListTodo.Text>
+                    <ToDoListTodo.Delete todoId={todo.id}/>
+                  </ToDoListTodo.Root> 
+                )
+              )}
+            </ToDoListItemsList.Root>
+          ) 
+        }
       </main>
     </Fragment>
   );
