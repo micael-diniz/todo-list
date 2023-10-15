@@ -7,16 +7,16 @@ import { useShallow } from "zustand/react/shallow";
 
 interface ToDoListTodoRootProps extends CheckboxProps{
   isChecked: TodoProps["isChecked"]
-  todoId: TodoProps["id"]
+  toDoId: TodoProps["id"]
 }
 
-export function ToDoListTodoRoot({isChecked, todoId, children}: ToDoListTodoRootProps) {
+export function ToDoListTodoRoot({isChecked, toDoId, children}: ToDoListTodoRootProps) {
   const [isSelected, setIsSelected] = useState(isChecked);
   const updateTodoStatus = useBoundStore(useShallow((state) => state.updateTodoStatus))
 
   function handleSelectTodo() {
     setIsSelected((prev) => {
-      updateTodoStatus({todoId, isChecked: !prev})
+      updateTodoStatus({toDoId, isChecked: !prev})
       return !prev
     })
   }

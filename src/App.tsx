@@ -48,12 +48,12 @@ export function App() {
                   <ToDoListTodo.Root 
                     key={todo.id} 
                     isChecked={todo.isChecked} 
-                    todoId={todo.id}
+                    toDoId={todo.id}
                   >
                     <ToDoListTodo.Text>
                       {todo.toDoContent}
                     </ToDoListTodo.Text>
-                    <ToDoListTodo.Delete todoId={todo.id}/>
+                    <ToDoListTodo.Delete toDoId={todo.id}/>
                   </ToDoListTodo.Root> 
                 )
               )}
