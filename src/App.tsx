@@ -4,8 +4,11 @@ import { ToDoListForm } from "./components/molecules/ToDoListForm";
 import { ToDoListSummary } from "./components/molecules/ToDoListSummary";
 import { ToDoListItemsList } from "./components/organisms/ToDoListItemsList";
 import { ToDoListTodo } from "./components/molecules/ToDoListTodo";
+import { useBoundStore } from "./store";
 
 export function App() {
+  const toDosList = useBoundStore((state) => state.toDosList)
+  console.log({toDosList})
   return (
     <Fragment>
       <ToDoListHeader.Root>
