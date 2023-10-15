@@ -34,3 +34,13 @@ Challenge proposed by Rocketseat's Ignite course related to Fundamentals of Reac
 ## Design
 
 Figma: [ToDo List](<https://www.figma.com/file/MUORNvgGWxae52zzWBRYBK/ToDo-List-%E2%80%A2-Desafio-React-(Copy)?type=design&node-id=56-96&mode=design&t=5OMdVECshh2VJopn-0>)
+
+## Result
+
+### Empty list of to-dos
+
+![image](https://github.com/micael-diniz/todo-list/assets/45563240/62de44d2-2167-4813-9799-9a259c13e3e8)
+
+### List of to-dos
+
+![image](https://github.com/micael-diniz/todo-list/assets/45563240/ff0a31e7-eaa9-446c-a209-2cdad4d71f72)
