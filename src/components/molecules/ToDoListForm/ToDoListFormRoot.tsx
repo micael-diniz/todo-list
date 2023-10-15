@@ -9,7 +9,7 @@ import { useBoundStore } from "../../../store";
 import { useShallow } from "zustand/react/shallow";
 
 const newTodoFormSchema = z.object({
-  toDoContent: z.string().min(1, {"message": "Don't forget to add your To-do content!"})
+  toDoContent: z.string().min(1, {"message": "Don't forget to add your to-do content!"})
 })
 export type NewTodoFormSchema = z.infer<typeof newTodoFormSchema>;
 
