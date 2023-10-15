@@ -2,7 +2,7 @@
 
 Challenge proposed by Rocketseat's Ignite course related to Fundamentals of React.
 
-**_Some tools used here is very overkill and not needed to this project, but the idea was to experiment with new options_**
+**_Some tools used here is very overkill and not needed to this project, but the idea was to experiment with new options_.**
 
 **Briefing:** [Notion](https://efficient-sloth-d85.notion.site/Desafio-01-Praticando-os-conceitos-do-ReactJS-91fd63dd1a5b4a2796152de293ec1074)
 
