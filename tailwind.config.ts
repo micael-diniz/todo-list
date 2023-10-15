@@ -7,6 +7,9 @@ export default {
   content: ["./src/**/*.{jsx,tsx}", "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      padding: {
+        18: "4.5rem"
+      },
       minHeight: {
         18: "4.5rem",
       },

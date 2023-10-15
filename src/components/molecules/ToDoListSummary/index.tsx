@@ -1,9 +1,9 @@
 import { ToDoListCompletedSummary } from "./ToDoListCompletedSummary";
-import { ToDoListCreatedTasksSummary } from "./ToDoListCreatedTasks";
+import { ToDoListCreatedToDosSummary } from "./ToDoListCreatedToDosSummary"; 
 import { ToDoListSummaryRoot } from "./ToDoListSummaryRoot";
 
 export const ToDoListSummary = {
   Root: ToDoListSummaryRoot,
-  CreatedTasksSummary: ToDoListCreatedTasksSummary,
+  CreatedToDosSummary: ToDoListCreatedToDosSummary,
   CompletedSummary: ToDoListCompletedSummary
 }

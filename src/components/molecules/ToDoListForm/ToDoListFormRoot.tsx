@@ -17,6 +17,7 @@ export function ToDoListFormRoot() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<NewTodoFormSchema>({resolver: zodResolver(newTodoFormSchema)})
   const addNewTodo = useBoundStore(useShallow((state) => state.addNewTodo))
@@ -24,6 +25,7 @@ export function ToDoListFormRoot() {
   function handleFormSubmit(data: NewTodoFormSchema ) {
     const todo = new Todo({ toDoContent: data.toDoContent, isChecked: false });
     addNewTodo(todo)
+    reset()
   }
 
   return (

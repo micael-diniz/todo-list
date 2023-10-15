@@ -15,7 +15,8 @@
   body {
     @apply bg-gray-600;
     @apply font-inter;
-    @apply h-full;
+    @apply h-auto;
+    @apply min-h-full
   }
   
   input, button {
