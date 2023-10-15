@@ -1,7 +1,6 @@
 import { Fragment } from "react";
 import { ToDoListHeader } from "./components/molecules/ToDoListHeader";
 import { ToDoListForm } from "./components/molecules/ToDoListForm";
-import { Text } from "./components/atoms/Text";
 import { ToDoListSummary } from "./components/molecules/ToDoListSummary";
 import { ToDoListItemsList } from "./components/organisms/ToDoListItemsList";
 import { ToDoListTodo } from "./components/molecules/ToDoListTodo";
@@ -14,13 +13,7 @@ export function App() {
       </ToDoListHeader.Root>
 
       <main className="mx-auto -mt-[1.6875rem] max-w-[47rem] px-4">
-        <ToDoListForm.Root>
-          <ToDoListForm.TextInput />
-          <ToDoListForm.Submit>
-            <Text className="text-[0.85rem] leading-[140%]">Create</Text>
-            <ToDoListForm.SubmitIcon />
-          </ToDoListForm.Submit>
-        </ToDoListForm.Root>
+        <ToDoListForm.Root />
 
         <ToDoListSummary.Root>
           <ToDoListSummary.CreatedTasksSummary />
